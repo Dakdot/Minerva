@@ -1,0 +1,3 @@
+[submodule "Rambutan/vendor/spdlog"]
+	path = Rambutan/vendor/spdlog
+	url = https://github.com/gabime/spdlog
