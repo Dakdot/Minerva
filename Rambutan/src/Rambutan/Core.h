@@ -9,3 +9,5 @@
 #else
 	#error Rambutan only supports Windows for the time being!
 #endif
+
+#define BIT(x) (1 << x)

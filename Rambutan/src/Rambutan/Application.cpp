@@ -1,5 +1,8 @@
 #include "Application.h"
 
+#include "Events/ApplicationEvent.h"
+#include "Log.h"
+
 namespace Rambutan {
 
 	Application::Application()
@@ -12,10 +15,10 @@ namespace Rambutan {
 
 	void Application::Run()
 	{
-		while (true) 
-		{
+		WindowResizeEvent e(1280, 720);
+		RB_TRACE(e);
 
-		}
+		while (true);
 	}
 
 }

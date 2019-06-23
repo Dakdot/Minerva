@@ -4,6 +4,9 @@
     <Filter Include="Rambutan">
       <UniqueIdentifier>{DF4F0C59-CB1C-6764-F435-550CE0619CF2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Rambutan\Events">
+      <UniqueIdentifier>{E38A0B1D-4F16-79E1-5827-FCD5C431D5E1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Rambutan.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Rambutan\EntryPoint.h">
       <Filter>Rambutan</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rambutan\Events\ApplicationEvent.h">
+      <Filter>Rambutan\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rambutan\Events\Event.h">
+      <Filter>Rambutan\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rambutan\Events\KeyEvent.h">
+      <Filter>Rambutan\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rambutan\Events\MouseEvent.h">
+      <Filter>Rambutan\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Rambutan\Log.h">
       <Filter>Rambutan</Filter>
