@@ -2,9 +2,6 @@
 
 #include "Rambutan/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Rambutan {
 
 	enum class EventType 

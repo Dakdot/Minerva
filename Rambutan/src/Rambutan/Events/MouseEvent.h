@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Rambutan {
 
 	class RAMBUTAN_API MouseMovedEvent : public Event

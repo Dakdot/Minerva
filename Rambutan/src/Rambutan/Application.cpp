@@ -1,3 +1,5 @@
+#include "rbpch.h"
+
 #include "Application.h"
 
 #include "Events/ApplicationEvent.h"
@@ -16,7 +18,7 @@ namespace Rambutan {
 	void Application::Run()
 	{
 		WindowResizeEvent e(1280, 720);
-		RB_TRACE(e);
+		RB_TRACE(e); 
 
 		while (true);
 	}
