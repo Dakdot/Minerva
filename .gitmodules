@@ -1,3 +1,6 @@
 [submodule "Rambutan/vendor/spdlog"]
 	path = Rambutan/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Rambutan/vendor/GLFW"]
+	path = Rambutan/vendor/GLFW
+	url = https://github.com/TheCherno/glfw

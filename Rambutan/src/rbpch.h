@@ -16,3 +16,5 @@
 #ifdef HZ_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
+
+#include "Rambutan/Log.h"

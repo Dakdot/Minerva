@@ -1,5 +1,7 @@
 #pragma once
 
+#include "rbpch.h"
+
 #include "Rambutan/Core.h"
 
 namespace Rambutan {

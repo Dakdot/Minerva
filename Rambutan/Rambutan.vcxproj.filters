@@ -35,6 +35,8 @@
       <Filter>Rambutan</Filter>
     </ClInclude>
     <ClInclude Include="src\rbpch.h" />
+    <ClInclude Include="src\Rambutan\Window.h" />
+    <ClInclude Include="src\Rambutan\Platform\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Rambutan\Application.cpp">
@@ -44,5 +46,6 @@
       <Filter>Rambutan</Filter>
     </ClCompile>
     <ClCompile Include="src\rbpch.cpp" />
+    <ClCompile Include="src\Rambutan\Platform\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
