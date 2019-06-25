@@ -43,6 +43,9 @@ namespace Rambutan {
 			return ss.str();
 		}
 
+		EVENT_CLASS_TYPE(MouseScrolled)
+		EVENT_CLASS_CATEGORY(EventCategoryInput | EventCategoryMouse)
+
 	private:
 		float m_XOffset, m_YOffset;
 	};
