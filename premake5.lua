@@ -59,14 +59,17 @@ project "Rambutan"
 
     filter "configurations:Debug"
         defines "RB_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "RB_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "RB_DIST"
+        buildoptions "/MD"
         optimize "On"
 
 project "Sandbox"
@@ -103,12 +106,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "RB_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "RB_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "RB_DIST"
+        buildoptions "/MD"
         optimize "On"

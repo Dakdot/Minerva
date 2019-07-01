@@ -7,6 +7,9 @@
     <Filter Include="Rambutan\Events">
       <UniqueIdentifier>{E38A0B1D-4F16-79E1-5827-FCD5C431D5E1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Rambutan\Platform">
+      <UniqueIdentifier>{13D737AA-7FED-3540-C864-C16134BA06C8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Rambutan.h" />
@@ -31,21 +34,39 @@
     <ClInclude Include="src\Rambutan\Events\MouseEvent.h">
       <Filter>Rambutan\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Rambutan\Layer.h">
+      <Filter>Rambutan</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rambutan\LayerStack.h">
+      <Filter>Rambutan</Filter>
+    </ClInclude>
     <ClInclude Include="src\Rambutan\Log.h">
       <Filter>Rambutan</Filter>
     </ClInclude>
+    <ClInclude Include="src\Rambutan\Platform\WindowsWindow.h">
+      <Filter>Rambutan\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rambutan\Window.h">
+      <Filter>Rambutan</Filter>
+    </ClInclude>
     <ClInclude Include="src\rbpch.h" />
-    <ClInclude Include="src\Rambutan\Window.h" />
-    <ClInclude Include="src\Rambutan\Platform\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Rambutan\Application.cpp">
       <Filter>Rambutan</Filter>
     </ClCompile>
+    <ClCompile Include="src\Rambutan\Layer.cpp">
+      <Filter>Rambutan</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Rambutan\LayerStack.cpp">
+      <Filter>Rambutan</Filter>
+    </ClCompile>
     <ClCompile Include="src\Rambutan\Log.cpp">
       <Filter>Rambutan</Filter>
     </ClCompile>
+    <ClCompile Include="src\Rambutan\Platform\WindowsWindow.cpp">
+      <Filter>Rambutan\Platform</Filter>
+    </ClCompile>
     <ClCompile Include="src\rbpch.cpp" />
-    <ClCompile Include="src\Rambutan\Platform\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
