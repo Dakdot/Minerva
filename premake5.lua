@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to the root folder
 IncludeDir = {}
 IncludeDir["GLFW"] = "Rambutan/vendor/GLFW/include"
+IncludeDir["Glad"] = "Rambutan/vendor/Glad/include"
 
 include "Rambutan/vendor/GLFW"
+include "Rambutan/vendor/Glad"
 
 project "Rambutan"
     location "Rambutan"
@@ -35,11 +37,13 @@ project "Rambutan"
     includedirs {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -50,7 +54,8 @@ project "Rambutan"
 
         defines {
             "RB_PLATFORM_WINDOWS",
-            "RB_BUILD_DLL"
+            "RB_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands {
