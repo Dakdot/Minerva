@@ -1,11 +1,14 @@
 workspace "Minerva"
-    architecture "x64"
 
-    configurations {
-        "Debug",
-        "Release",
-        "Dist"
-    }
+startproject "Sandbox"
+
+architecture "x64"
+
+configurations {
+    "Debug",
+    "Release",
+    "Dist"
+}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
@@ -14,23 +17,24 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Minerva/vendor/GLFW/include"
 IncludeDir["Glad"] = "Minerva/vendor/Glad/include"
 IncludeDir["ImGui"] = "Minerva/vendor/imgui"
+group "Dependencies"
+    include "Minerva/vendor/GLFW"
+    include "Minerva/vendor/Glad"
+    include "Minerva/vendor/ImGui"
 
-include "Minerva/vendor/GLFW"
-include "Minerva/vendor/Glad"
-include "Minerva/vendor/ImGui"
-
-startproject "Sandbox"
+group ""
 
 project "Minerva"
     location "Minerva"
     kind "SharedLib"
     language "C++"
+    staticruntime "off"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
     pchheader "mvpch.h"
-    pchsource "Minerva/src/rbpch.cpp"
+    pchsource "Minerva/src/mvpch.cpp"
 
     files {
         "%{prj.name}/src/**.h",
@@ -55,7 +59,6 @@ project "Minerva"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
         systemversion "latest"
 
         defines {
@@ -65,28 +68,29 @@ project "Minerva"
         }
 
         postbuildcommands {
-            ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+            ("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
         }
 
     filter "configurations:Debug"
         defines "MV_DEBUG"
-        buildoptions "/MDd"
+        runtime "Debug"
         symbols "On"
 
     filter "configurations:Release"
         defines "MV_RELEASE"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
 
     filter "configurations:Dist"
         defines "MV_DIST"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
 
 project "Sandbox"
     location "Sandbox"
     kind "ConsoleApp"
     language "C++"
+    staticruntime "off"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -117,15 +121,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "MV_DEBUG"
-        buildoptions "/MDd"
+        runtime "Debug"
         symbols "On"
 
     filter "configurations:Release"
         defines "MV_RELEASE"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
 
     filter "configurations:Dist"
         defines "MV_DIST"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
