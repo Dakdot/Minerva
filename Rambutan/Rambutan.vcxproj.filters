@@ -7,8 +7,17 @@
     <Filter Include="Rambutan\Events">
       <UniqueIdentifier>{E38A0B1D-4F16-79E1-5827-FCD5C431D5E1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Rambutan\ImGui">
+      <UniqueIdentifier>{49F0CEAB-35BE-C2B1-1E52-33D80ABF9E16}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Rambutan\Platform">
       <UniqueIdentifier>{13D737AA-7FED-3540-C864-C16134BA06C8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rambutan\Platform\OpenGL">
+      <UniqueIdentifier>{E76C5FDB-D391-AE5B-FCDC-93EBE860AD79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rambutan\Platform\Windows">
+      <UniqueIdentifier>{4DE4689F-B9A6-9C29-0257-2BB66E587507}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +43,9 @@
     <ClInclude Include="src\Rambutan\Events\MouseEvent.h">
       <Filter>Rambutan\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Rambutan\ImGui\ImGuiLayer.h">
+      <Filter>Rambutan\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Rambutan\Layer.h">
       <Filter>Rambutan</Filter>
     </ClInclude>
@@ -43,8 +55,11 @@
     <ClInclude Include="src\Rambutan\Log.h">
       <Filter>Rambutan</Filter>
     </ClInclude>
-    <ClInclude Include="src\Rambutan\Platform\WindowsWindow.h">
-      <Filter>Rambutan\Platform</Filter>
+    <ClInclude Include="src\Rambutan\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Rambutan\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rambutan\Platform\Windows\WindowsWindow.h">
+      <Filter>Rambutan\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Rambutan\Window.h">
       <Filter>Rambutan</Filter>
@@ -55,6 +70,9 @@
     <ClCompile Include="src\Rambutan\Application.cpp">
       <Filter>Rambutan</Filter>
     </ClCompile>
+    <ClCompile Include="src\Rambutan\ImGui\ImGuiLayer.cpp">
+      <Filter>Rambutan\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Rambutan\Layer.cpp">
       <Filter>Rambutan</Filter>
     </ClCompile>
@@ -64,8 +82,11 @@
     <ClCompile Include="src\Rambutan\Log.cpp">
       <Filter>Rambutan</Filter>
     </ClCompile>
-    <ClCompile Include="src\Rambutan\Platform\WindowsWindow.cpp">
-      <Filter>Rambutan\Platform</Filter>
+    <ClCompile Include="src\Rambutan\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Rambutan\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Rambutan\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Rambutan\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\rbpch.cpp" />
   </ItemGroup>

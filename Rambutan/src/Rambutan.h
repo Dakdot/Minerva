@@ -4,6 +4,7 @@
 #include "Rambutan/Application.h"
 #include "Rambutan/Log.h"
 #include "Rambutan/Layer.h"
+#include "Rambutan/ImGui/ImGuiLayer.h"
 
 // ---Entry Point-----------------------------------
 #include "Rambutan/EntryPoint.h"

@@ -24,6 +24,7 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Rambutan::ImGuiLayer());
 	}
 
 	~Sandbox()

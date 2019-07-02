@@ -80,7 +80,7 @@
       <PrecompiledHeaderFile>rbpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>RB_PLATFORM_WINDOWS;RB_BUILD_DLL;GLFW_INCLUDE_NONE;RB_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -103,7 +103,7 @@
       <PrecompiledHeaderFile>rbpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>RB_PLATFORM_WINDOWS;RB_BUILD_DLL;GLFW_INCLUDE_NONE;RB_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -130,7 +130,7 @@
       <PrecompiledHeaderFile>rbpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>RB_PLATFORM_WINDOWS;RB_BUILD_DLL;GLFW_INCLUDE_NONE;RB_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -160,19 +160,23 @@
     <ClInclude Include="src\Rambutan\Events\Event.h" />
     <ClInclude Include="src\Rambutan\Events\KeyEvent.h" />
     <ClInclude Include="src\Rambutan\Events\MouseEvent.h" />
+    <ClInclude Include="src\Rambutan\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Rambutan\Layer.h" />
     <ClInclude Include="src\Rambutan\LayerStack.h" />
     <ClInclude Include="src\Rambutan\Log.h" />
-    <ClInclude Include="src\Rambutan\Platform\WindowsWindow.h" />
+    <ClInclude Include="src\Rambutan\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Rambutan\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Rambutan\Window.h" />
     <ClInclude Include="src\rbpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Rambutan\Application.cpp" />
+    <ClCompile Include="src\Rambutan\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Rambutan\Layer.cpp" />
     <ClCompile Include="src\Rambutan\LayerStack.cpp" />
     <ClCompile Include="src\Rambutan\Log.cpp" />
-    <ClCompile Include="src\Rambutan\Platform\WindowsWindow.cpp" />
+    <ClCompile Include="src\Rambutan\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Rambutan\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\rbpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
@@ -183,6 +187,9 @@
     </ProjectReference>
     <ProjectReference Include="vendor\Glad\Glad.vcxproj">
       <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\ImGui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
