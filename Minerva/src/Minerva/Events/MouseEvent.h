@@ -4,7 +4,7 @@
 
 namespace Minerva {
 
-	class Minerva_API MouseMovedEvent : public Event
+	class MINERVA_API MouseMovedEvent : public Event
 	{
 	public:
 		MouseMovedEvent(float x, float y)
@@ -27,7 +27,7 @@ namespace Minerva {
 		float m_MouseX, m_MouseY;
 	};
 
-	class Minerva_API MouseScrolledEvent : public Event
+	class MINERVA_API MouseScrolledEvent : public Event
 	{
 	public:
 		MouseScrolledEvent(float xOffset, float yOffset)
@@ -50,7 +50,7 @@ namespace Minerva {
 		float m_XOffset, m_YOffset;
 	};
 
-	class Minerva_API MouseButtonEvent : public Event
+	class MINERVA_API MouseButtonEvent : public Event
 	{
 	public:
 		inline int GetMouseButton() const { return m_Button; }
@@ -64,7 +64,7 @@ namespace Minerva {
 		int m_Button;
 	};
 
-	class Minerva_API MouseButtonPressedEvent : public MouseButtonEvent
+	class MINERVA_API MouseButtonPressedEvent : public MouseButtonEvent
 	{
 	public:
 		MouseButtonPressedEvent(int button)
@@ -80,7 +80,7 @@ namespace Minerva {
 		EVENT_CLASS_TYPE(MouseButtonPressed)
 	};
 
-	class Minerva_API MouseButtonReleasedEvent : public MouseButtonEvent
+	class MINERVA_API MouseButtonReleasedEvent : public MouseButtonEvent
 	{
 	public:
 		MouseButtonReleasedEvent(int button)

@@ -2,9 +2,9 @@
 
 #ifdef MV_PLATFORM_WINDOWS
 	#ifdef MV_BUILD_DLL
-		#define Minerva_API __declspec(dllexport)
+		#define MINERVA_API __declspec(dllexport)
 	#else
-		#define Minerva_API __declspec(dllimport)
+		#define MINERVA_API __declspec(dllimport)
 	#endif
 #else
 	#error Minerva only supports Windows for the time being!

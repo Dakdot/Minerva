@@ -46,6 +46,9 @@
     <ClInclude Include="src\Minerva\ImGui\ImGuiLayer.h">
       <Filter>Minerva\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Minerva\Input.h">
+      <Filter>Minerva</Filter>
+    </ClInclude>
     <ClInclude Include="src\Minerva\Layer.h">
       <Filter>Minerva</Filter>
     </ClInclude>
@@ -57,6 +60,9 @@
     </ClInclude>
     <ClInclude Include="src\Minerva\Platform\OpenGL\ImGuiOpenGLRenderer.h">
       <Filter>Minerva\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Platform\Windows\WindowsInput.h">
+      <Filter>Minerva\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Minerva\Platform\Windows\WindowsWindow.h">
       <Filter>Minerva\Platform\Windows</Filter>
@@ -84,6 +90,9 @@
     </ClCompile>
     <ClCompile Include="src\Minerva\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
       <Filter>Minerva\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Minerva\Platform\Windows\WindowsInput.cpp">
+      <Filter>Minerva\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Minerva\Platform\Windows\WindowsWindow.cpp">
       <Filter>Minerva\Platform\Windows</Filter>

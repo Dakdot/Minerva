@@ -1,8 +1,6 @@
 workspace "Minerva"
-
-startproject "Sandbox"
-
 architecture "x64"
+startproject "Sandbox"
 
 configurations {
     "Debug",
@@ -17,6 +15,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Minerva/vendor/GLFW/include"
 IncludeDir["Glad"] = "Minerva/vendor/Glad/include"
 IncludeDir["ImGui"] = "Minerva/vendor/imgui"
+
 group "Dependencies"
     include "Minerva/vendor/GLFW"
     include "Minerva/vendor/Glad"
@@ -112,7 +111,6 @@ project "Sandbox"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
         systemversion "latest"
 
         defines {

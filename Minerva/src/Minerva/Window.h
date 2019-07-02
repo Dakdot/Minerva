@@ -21,7 +21,7 @@ namespace Minerva {
 	};
 
 	// Desktop
-	class Minerva_API Window
+	class MINERVA_API Window
 	{
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;
@@ -37,6 +37,8 @@ namespace Minerva {
 		virtual void SetEventCallback(const EventCallbackFn& callback) = 0;
 		virtual void SetVSync(bool enabled) = 0;
 		virtual bool IsVSync() const = 0;
+
+		virtual void* GetNativeWindow() const = 0;
 
 		static Window* Create(const WindowProps& props = WindowProps());
 	};

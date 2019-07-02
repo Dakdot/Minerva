@@ -5,7 +5,7 @@
 
 namespace Minerva {
 
-	class Minerva_API Layer
+	class MINERVA_API Layer
 	{
 	public:
 		Layer(const std::string& name = "Layer");

@@ -8,7 +8,7 @@
 
 namespace Minerva {
 
-	class Minerva_API ImGuiLayer : public Layer
+	class MINERVA_API ImGuiLayer : public Layer
 	{
 	public:
 		ImGuiLayer();

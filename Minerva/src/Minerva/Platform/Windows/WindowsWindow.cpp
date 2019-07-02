@@ -7,7 +7,6 @@
 
 #include <glad/glad.h>
 
-
 namespace Minerva {
 
 	static bool s_GLFWInitialized;

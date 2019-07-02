@@ -31,7 +31,7 @@ namespace Minerva {
 
 #define EVENT_CLASS_CATEGORY(category)	virtual int GetCategoryFlags() const override { return category; }
 
-	class Minerva_API Event
+	class MINERVA_API Event
 	{
 		friend class EventDispatcher;
 	public:

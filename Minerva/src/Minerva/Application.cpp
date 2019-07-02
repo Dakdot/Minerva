@@ -1,7 +1,7 @@
 #include "mvpch.h"
 
 #include "Application.h"
-
+#include "Input.h"
 #include "Log.h"
 
 #include <glad/glad.h>
@@ -34,6 +34,9 @@ namespace Minerva {
 				layer->OnUpdate();
 
 			m_Window->OnUpdate();
+
+			auto [x, y] = Input::GetMousePos();
+			MV_CORE_TRACE("{0}, {1}", x, y);
 		}
 	}
 
