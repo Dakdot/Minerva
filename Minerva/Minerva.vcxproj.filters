@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Minerva">
+      <UniqueIdentifier>{B76BF127-234B-70C3-2C63-FB9998C1D624}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Minerva\Events">
+      <UniqueIdentifier>{BBE34FE1-A7B1-43E7-9045-B40D7CB21F4C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Minerva\ImGui">
+      <UniqueIdentifier>{218EFFA9-8D4E-7BE0-5689-C45DC208C0BC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Minerva\Platform">
+      <UniqueIdentifier>{EBC5F590-D7BE-14E3-00F1-F967EC48F4EE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Minerva\Platform\OpenGL">
+      <UniqueIdentifier>{BF38F1B6-2B70-394E-347A-9D71A0306047}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Minerva\Platform\Windows">
+      <UniqueIdentifier>{252B34ED-1150-836D-3A9B-68FD261F828B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Minerva.h" />
+    <ClInclude Include="src\Minerva\Application.h">
+      <Filter>Minerva</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Core.h">
+      <Filter>Minerva</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\EntryPoint.h">
+      <Filter>Minerva</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Events\ApplicationEvent.h">
+      <Filter>Minerva\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Events\Event.h">
+      <Filter>Minerva\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Events\KeyEvent.h">
+      <Filter>Minerva\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Events\MouseEvent.h">
+      <Filter>Minerva\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\ImGui\ImGuiLayer.h">
+      <Filter>Minerva\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Layer.h">
+      <Filter>Minerva</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\LayerStack.h">
+      <Filter>Minerva</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Log.h">
+      <Filter>Minerva</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Minerva\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Platform\Windows\WindowsWindow.h">
+      <Filter>Minerva\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Window.h">
+      <Filter>Minerva</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mvpch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Minerva\Application.cpp">
+      <Filter>Minerva</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Minerva\ImGui\ImGuiLayer.cpp">
+      <Filter>Minerva\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Minerva\Layer.cpp">
+      <Filter>Minerva</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Minerva\LayerStack.cpp">
+      <Filter>Minerva</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Minerva\Log.cpp">
+      <Filter>Minerva</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Minerva\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Minerva\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Minerva\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Minerva\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mvpch.cpp" />
+  </ItemGroup>
+</Project>

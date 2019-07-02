@@ -1,9 +1,9 @@
-[submodule "Rambutan/vendor/spdlog"]
-	path = Rambutan/vendor/spdlog
+[submodule "Minerva/vendor/spdlog"]
+	path = Minerva/vendor/spdlog
 	url = https://github.com/gabime/spdlog
-[submodule "Rambutan/vendor/GLFW"]
-	path = Rambutan/vendor/GLFW
-	url = https://github.com/TheCherno/glfw
-[submodule "Rambutan\\vendor\\imgui"]
-	path = Rambutan\\vendor\\imgui
+[submodule "Minerva/vendor/GLFW"]
+	path = Minerva/vendor/GLFW
+	url = https://github.com/glfw/glfw
+[submodule "Minerva/vendor/imgui"]
+	path = Minerva/vendor/imgui
 	url = https://github.com/ocornut/imgui

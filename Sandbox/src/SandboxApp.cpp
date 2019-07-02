@@ -1,6 +1,6 @@
-#include <Rambutan.h>
+#include <Minerva.h>
 
-class ExampleLayer : public Rambutan::Layer
+class ExampleLayer : public Minerva::Layer
 {
 public:
 	ExampleLayer()
@@ -9,22 +9,22 @@ public:
 
 	void OnUpdate() override
 	{
-		RB_INFO("ExampleLayer::Update");
+		MV_INFO("ExampleLayer::Update");
 	}
 
-	void OnEvent(Rambutan::Event& event) override
+	void OnEvent(Minerva::Event& event) override
 	{
-		RB_TRACE("{0}", event);
+		MV_INFO("{0}", event);
 	}
 };
 
-class Sandbox : public Rambutan::Application
+class Sandbox : public Minerva::Application
 {
 public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Rambutan::ImGuiLayer());
+		PushOverlay(new Minerva::ImGuiLayer());
 	}
 
 	~Sandbox()
@@ -34,7 +34,7 @@ public:
 
 };
 
-Rambutan::Application* Rambutan::CreateApplication()
+Minerva::Application* Minerva::CreateApplication()
 {
 	return new Sandbox();
 }

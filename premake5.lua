@@ -1,4 +1,4 @@
-workspace "Rambutan"
+workspace "Minerva"
     architecture "x64"
 
     configurations {
@@ -11,26 +11,26 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to the root folder
 IncludeDir = {}
-IncludeDir["GLFW"] = "Rambutan/vendor/GLFW/include"
-IncludeDir["Glad"] = "Rambutan/vendor/Glad/include"
-IncludeDir["ImGui"] = "Rambutan/vendor/imgui"
+IncludeDir["GLFW"] = "Minerva/vendor/GLFW/include"
+IncludeDir["Glad"] = "Minerva/vendor/Glad/include"
+IncludeDir["ImGui"] = "Minerva/vendor/imgui"
 
-include "Rambutan/vendor/GLFW"
-include "Rambutan/vendor/Glad"
-include "Rambutan/vendor/ImGui"
+include "Minerva/vendor/GLFW"
+include "Minerva/vendor/Glad"
+include "Minerva/vendor/ImGui"
 
-startproject "Rambutan"
+startproject "Sandbox"
 
-project "Rambutan"
-    location "Rambutan"
+project "Minerva"
+    location "Minerva"
     kind "SharedLib"
     language "C++"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-    pchheader "rbpch.h"
-    pchsource "Rambutan/src/rbpch.cpp"
+    pchheader "mvpch.h"
+    pchsource "Minerva/src/rbpch.cpp"
 
     files {
         "%{prj.name}/src/**.h",
@@ -59,8 +59,8 @@ project "Rambutan"
         systemversion "latest"
 
         defines {
-            "RB_PLATFORM_WINDOWS",
-            "RB_BUILD_DLL",
+            "MV_PLATFORM_WINDOWS",
+            "MV_BUILD_DLL",
             "GLFW_INCLUDE_NONE"
         }
 
@@ -69,17 +69,17 @@ project "Rambutan"
         }
 
     filter "configurations:Debug"
-        defines "RB_DEBUG"
+        defines "MV_DEBUG"
         buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
-        defines "RB_RELEASE"
+        defines "MV_RELEASE"
         buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
-        defines "RB_DIST"
+        defines "MV_DIST"
         buildoptions "/MD"
         optimize "On"
 
@@ -98,12 +98,12 @@ project "Sandbox"
     }
 
     includedirs {
-        "Rambutan/vendor/spdlog/include",
-        "Rambutan/src"
+        "Minerva/vendor/spdlog/include",
+        "Minerva/src"
     }
 
     links {
-        "Rambutan"
+        "Minerva"
     }
 
     filter "system:windows"
@@ -112,20 +112,20 @@ project "Sandbox"
         systemversion "latest"
 
         defines {
-            "RB_PLATFORM_WINDOWS"
+            "MV_PLATFORM_WINDOWS"
         }
 
     filter "configurations:Debug"
-        defines "RB_DEBUG"
+        defines "MV_DEBUG"
         buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
-        defines "RB_RELEASE"
+        defines "MV_RELEASE"
         buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
-        defines "RB_DIST"
+        defines "MV_DIST"
         buildoptions "/MD"
         optimize "On"
