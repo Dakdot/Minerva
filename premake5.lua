@@ -15,6 +15,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Minerva/vendor/GLFW/include"
 IncludeDir["Glad"] = "Minerva/vendor/Glad/include"
 IncludeDir["ImGui"] = "Minerva/vendor/imgui"
+IncludeDir["glm"] = "Minerva/vendor/glm"
 
 group "Dependencies"
     include "Minerva/vendor/GLFW"
@@ -38,7 +39,9 @@ project "Minerva"
     files {
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.hpp",
-        "%{prj.name}/src/**.cpp"
+        "%{prj.name}/src/**.cpp",
+        "%{prj.name}/vendor/glm/glm/**.hpp",
+        "%{prj.name}/vendor/glm/glm/**.inl"
     }
 
     includedirs {
@@ -46,7 +49,8 @@ project "Minerva"
         "%{prj.name}/vendor/spdlog/include",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
-        "%{IncludeDir.ImGui}"
+        "%{IncludeDir.ImGui}",
+        "%{IncludeDir.glm}"
     }
 
     links {
@@ -97,12 +101,13 @@ project "Sandbox"
     files {
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.hpp",
-        "%{prj.name}/src/**.cpp"
+        "%{prj.name}/src/**.cpp",
     }
 
     includedirs {
         "Minerva/vendor/spdlog/include",
-        "Minerva/src"
+        "Minerva/src",
+        "%{IncludeDir.glm}"
     }
 
     links {
