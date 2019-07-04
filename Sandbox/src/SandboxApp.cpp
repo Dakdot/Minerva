@@ -9,12 +9,13 @@ public:
 
 	void OnUpdate() override
 	{
-		MV_INFO("ExampleLayer::Update");
+		if (Minerva::Input::IsKeyPressed(MV_KEY_LEFT_SHIFT))
+			MV_TRACE("Shift is being held");
 	}
 
 	void OnEvent(Minerva::Event& event) override
 	{
-		MV_INFO("{0}", event);
+		//MV_INFO("{0}", event);
 	}
 };
 

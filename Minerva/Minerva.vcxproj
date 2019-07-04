@@ -149,6 +149,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Minerva\KeyCodes.h" />
     <ClInclude Include="src\Minerva.h" />
     <ClInclude Include="src\Minerva\Application.h" />
     <ClInclude Include="src\Minerva\Core.h" />
@@ -162,6 +163,7 @@
     <ClInclude Include="src\Minerva\Layer.h" />
     <ClInclude Include="src\Minerva\LayerStack.h" />
     <ClInclude Include="src\Minerva\Log.h" />
+    <ClInclude Include="src\Minerva\MouseButtonCodes.h" />
     <ClInclude Include="src\Minerva\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Minerva\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Minerva\Platform\Windows\WindowsWindow.h" />
