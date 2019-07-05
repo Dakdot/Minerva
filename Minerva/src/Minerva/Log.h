@@ -6,7 +6,7 @@
 
 namespace Minerva {
 
-	class MINERVA_API Log
+	class Log
 	{
 	public:
 		static void Init();

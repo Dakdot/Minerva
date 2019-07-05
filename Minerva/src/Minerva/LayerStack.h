@@ -7,7 +7,7 @@
 
 namespace Minerva {
 
-	class MINERVA_API LayerStack
+	class LayerStack
 	{
 	public:
 		LayerStack();

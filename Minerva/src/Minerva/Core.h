@@ -1,11 +1,6 @@
 #pragma once
 
 #ifdef MV_PLATFORM_WINDOWS
-	#ifdef MV_BUILD_DLL
-		#define MINERVA_API __declspec(dllexport)
-	#else
-		#define MINERVA_API __declspec(dllimport)
-	#endif
 #else
 	#error Minerva only supports Windows for the time being!
 #endif

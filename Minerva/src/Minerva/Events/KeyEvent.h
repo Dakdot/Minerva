@@ -4,7 +4,7 @@
 
 namespace Minerva {
 	
-	class MINERVA_API KeyEvent : public Event
+	class KeyEvent : public Event
 	{
 	public:
 		inline int GetKeyCode() const { return m_KeyCode; }
@@ -18,7 +18,7 @@ namespace Minerva {
 		int m_KeyCode;
 	};
 
-	class MINERVA_API KeyPressedEvent : public KeyEvent
+	class KeyPressedEvent : public KeyEvent
 	{
 	public:
 		KeyPressedEvent(int keycode, int repeatCount)
@@ -39,7 +39,7 @@ namespace Minerva {
 		int m_RepeatCount;
 	};
 
-	class MINERVA_API KeyTypedEvent : public KeyEvent
+	class KeyTypedEvent : public KeyEvent
 	{
 	public:
 		KeyTypedEvent(int keycode)
@@ -55,7 +55,7 @@ namespace Minerva {
 		EVENT_CLASS_TYPE(KeyTyped)
 	};
 
-	class MINERVA_API KeyReleasedEvent : public KeyEvent
+	class KeyReleasedEvent : public KeyEvent
 	{
 	public:
 		KeyReleasedEvent(int keycode)

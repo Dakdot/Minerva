@@ -11,7 +11,7 @@
 
 namespace Minerva {
 
-	class MINERVA_API Application
+	class Application
 	{
 	public:
 		Application();
