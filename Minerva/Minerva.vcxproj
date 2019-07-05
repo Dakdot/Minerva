@@ -164,7 +164,6 @@
     <ClInclude Include="src\Minerva\LayerStack.h" />
     <ClInclude Include="src\Minerva\Log.h" />
     <ClInclude Include="src\Minerva\MouseButtonCodes.h" />
-    <ClInclude Include="src\Minerva\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Minerva\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Minerva\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Minerva\Window.h" />
@@ -536,11 +535,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Minerva\Application.cpp" />
+    <ClCompile Include="src\Minerva\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Minerva\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Minerva\Layer.cpp" />
     <ClCompile Include="src\Minerva\LayerStack.cpp" />
     <ClCompile Include="src\Minerva\Log.cpp" />
-    <ClCompile Include="src\Minerva\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Minerva\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Minerva\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\mvpch.cpp">
@@ -561,4 +560,4 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-</Project>
+</Project> 

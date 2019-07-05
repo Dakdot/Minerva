@@ -16,9 +16,6 @@
     <Filter Include="src\Minerva\Platform">
       <UniqueIdentifier>{E2CF62F8-CE5E-ECC1-777D-00BD63EBFC67}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Minerva\Platform\OpenGL">
-      <UniqueIdentifier>{D686BE25-4294-EC0B-CB7A-E8F63787B8C2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\Minerva\Platform\Windows">
       <UniqueIdentifier>{1C3CAB35-08F7-9AE1-B1AE-132C9D48E571}</UniqueIdentifier>
     </Filter>
@@ -89,9 +86,6 @@
     </ClInclude>
     <ClInclude Include="src\Minerva\MouseButtonCodes.h">
       <Filter>src\Minerva</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Minerva\Platform\OpenGL\ImGuiOpenGLRenderer.h">
-      <Filter>src\Minerva\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Minerva\Platform\Windows\WindowsInput.h">
       <Filter>src\Minerva\Platform\Windows</Filter>
@@ -1202,6 +1196,9 @@
     <ClCompile Include="src\Minerva\Application.cpp">
       <Filter>src\Minerva</Filter>
     </ClCompile>
+    <ClCompile Include="src\Minerva\ImGui\ImGuiBuild.cpp">
+      <Filter>src\Minerva\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Minerva\ImGui\ImGuiLayer.cpp">
       <Filter>src\Minerva\ImGui</Filter>
     </ClCompile>
@@ -1213,9 +1210,6 @@
     </ClCompile>
     <ClCompile Include="src\Minerva\Log.cpp">
       <Filter>src\Minerva</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Minerva\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
-      <Filter>src\Minerva\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Minerva\Platform\Windows\WindowsInput.cpp">
       <Filter>src\Minerva\Platform\Windows</Filter>

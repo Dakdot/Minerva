@@ -107,6 +107,7 @@ project "Sandbox"
     includedirs {
         "Minerva/vendor/spdlog/include",
         "Minerva/src",
+        "Minerva/vendor",
         "%{IncludeDir.glm}"
     }
 

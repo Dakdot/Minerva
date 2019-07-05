@@ -1,5 +1,7 @@
 #include <Minerva.h>
 
+#include "imgui/imgui.h"
+
 class ExampleLayer : public Minerva::Layer
 {
 public:
@@ -11,6 +13,13 @@ public:
 	{
 		if (Minerva::Input::IsKeyPressed(MV_KEY_LEFT_SHIFT))
 			MV_TRACE("Shift is being held");
+	}
+
+	void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello world!");
+		ImGui::End();
 	}
 
 	void OnEvent(Minerva::Event& event) override
@@ -25,7 +34,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Minerva::ImGuiLayer());
 	}
 
 	~Sandbox()
