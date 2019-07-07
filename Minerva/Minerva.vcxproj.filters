@@ -1191,6 +1191,8 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
+    <ClInclude Include="src\Minerva\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Minerva\Platform\OpenGL\OpenGLContext.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Minerva\Application.cpp">
@@ -1220,5 +1222,6 @@
     <ClCompile Include="src\mvpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Minerva\Platform\OpenGL\OpenGLContext.cpp" />
   </ItemGroup>
 </Project>
