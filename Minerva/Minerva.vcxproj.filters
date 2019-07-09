@@ -1193,6 +1193,7 @@
     </ClInclude>
     <ClInclude Include="src\Minerva\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Minerva\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Minerva\Renderer\Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Minerva\Application.cpp">
@@ -1223,5 +1224,6 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\Minerva\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Minerva\Renderer\Shader.cpp" />
   </ItemGroup>
 </Project>

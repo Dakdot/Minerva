@@ -9,6 +9,8 @@
 
 #include "ImGui/ImGuiLayer.h"
 
+#include "Minerva/Renderer/Shader.h"
+
 namespace Minerva {
 
 	class Application
@@ -38,6 +40,8 @@ namespace Minerva {
 		unsigned int m_VertexArray;
 		unsigned int m_VertexBuffer;
 		unsigned int m_IndexBuffer;
+
+		std::unique_ptr<Shader> m_Shader;
 
 		static Application* s_Instance;
 	};
