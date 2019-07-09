@@ -1194,6 +1194,9 @@
     <ClInclude Include="src\Minerva\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Minerva\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Minerva\Renderer\Shader.h" />
+    <ClInclude Include="src\Minerva\Renderer\Buffer.h" />
+    <ClInclude Include="src\Minerva\Platform\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\Minerva\Renderer\Renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Minerva\Application.cpp">
@@ -1225,5 +1228,8 @@
     </ClCompile>
     <ClCompile Include="src\Minerva\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Minerva\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Minerva\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Minerva\Platform\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\Minerva\Renderer\Renderer.cpp" />
   </ItemGroup>
 </Project>

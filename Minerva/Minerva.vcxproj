@@ -155,10 +155,13 @@
     <ClInclude Include="src\Minerva\LayerStack.h" />
     <ClInclude Include="src\Minerva\Log.h" />
     <ClInclude Include="src\Minerva\MouseButtonCodes.h" />
+    <ClInclude Include="src\Minerva\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Minerva\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Minerva\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Minerva\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Minerva\Renderer\Buffer.h" />
     <ClInclude Include="src\Minerva\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Minerva\Renderer\Renderer.h" />
     <ClInclude Include="src\Minerva\Renderer\Shader.h" />
     <ClInclude Include="src\Minerva\Window.h" />
     <ClInclude Include="src\mvpch.h" />
@@ -534,10 +537,13 @@
     <ClCompile Include="src\Minerva\Layer.cpp" />
     <ClCompile Include="src\Minerva\LayerStack.cpp" />
     <ClCompile Include="src\Minerva\Log.cpp" />
+    <ClCompile Include="src\Minerva\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Minerva\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Minerva\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Minerva\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\Minerva\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Minerva\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Minerva\Renderer\Renderer.cpp" />
     <ClCompile Include="src\mvpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
