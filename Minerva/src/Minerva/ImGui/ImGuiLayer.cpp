@@ -44,8 +44,6 @@ namespace Minerva {
 			style.Colors[ImGuiCol_WindowBg].w = 1.0f;
 		}
 
-		io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\Inter-Regular.ttf", 15.0f);
-
 		Application& app = Application::Get();
 		GLFWwindow* window = static_cast<GLFWwindow*>(app.GetWindow().GetNativeWindow());
 

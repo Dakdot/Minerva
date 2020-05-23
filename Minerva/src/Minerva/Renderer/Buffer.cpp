@@ -6,19 +6,29 @@
 
 namespace Minerva {
 
+
+	/////////////////////////////////////////////////////////////////////////////////////
+	// Vertex Buffer ////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////
+
 	VertexBuffer* VertexBuffer::Create(float* vertices, uint32_t size)
 	{
 		switch (Renderer::GetAPI())
 		{
 		case RendererAPI::NONE:
 			MV_CORE_ASSERT(false, "Renderer API \"NONE\" is currently unsupported.");
+			return nullptr;
 		case RendererAPI::OPENGL:
 			return new OpenGLVertexBuffer(vertices, size);
 		}
 
-		MV_CORE_ASSERT(false, "Unknown renderer API!");
+		MV_CORE_ASSERT(false, "Invalid renderer API!");
 		return nullptr;
 	}
+
+	/////////////////////////////////////////////////////////////////////////////////////
+	// Index Buffer /////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////
 
 	IndexBuffer* IndexBuffer::Create(uint32_t* indices, uint32_t count)
 	{
@@ -26,11 +36,12 @@ namespace Minerva {
 		{
 		case RendererAPI::NONE:
 			MV_CORE_ASSERT(false, "Renderer API \"NONE\" is currently unsupported.");
+			return nullptr;
 		case RendererAPI::OPENGL:
 			return new OpenGLIndexBuffer(indices, count);
 		}
 
-		MV_CORE_ASSERT(false, "Unknown renderer API!");
+		MV_CORE_ASSERT(false, "Invalid renderer API!");
 		return nullptr;
 	}
 

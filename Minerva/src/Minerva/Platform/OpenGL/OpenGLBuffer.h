@@ -4,6 +4,10 @@
 
 namespace Minerva {
 
+	/////////////////////////////////////////////////////////////////////////////////////
+	// GL Vertex Buffer /////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////
+
 	class OpenGLVertexBuffer : public VertexBuffer
 	{
 	public:
@@ -13,14 +17,22 @@ namespace Minerva {
 		virtual void Bind() const override;
 		virtual void Unbind() const override;
 
+		virtual const BufferLayout& GetLayout() const override { return m_Layout; }
+		virtual void SetLayout(const BufferLayout& layout) override { m_Layout = layout; }
+
 	private:
 		uint32_t m_RendererID;
+		BufferLayout m_Layout;
 	};
+
+	/////////////////////////////////////////////////////////////////////////////////////
+	// GL Index Buffer //////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////
 
 	class OpenGLIndexBuffer : public IndexBuffer
 	{
 	public:
-		OpenGLIndexBuffer(uint32_t* indices, uint32_t size);
+		OpenGLIndexBuffer(uint32_t* indices, uint32_t count);
 		virtual ~OpenGLIndexBuffer();
 
 		virtual void Bind() const override;

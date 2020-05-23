@@ -163,6 +163,7 @@
     <ClInclude Include="src\Minerva\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Minerva\Renderer\Renderer.h" />
     <ClInclude Include="src\Minerva\Renderer\Shader.h" />
+    <ClInclude Include="src\Minerva\Renderer\VertexArray.h" />
     <ClInclude Include="src\Minerva\Window.h" />
     <ClInclude Include="src\mvpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -542,8 +543,9 @@
     <ClCompile Include="src\Minerva\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Minerva\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Minerva\Renderer\Buffer.cpp" />
-    <ClCompile Include="src\Minerva\Renderer\Shader.cpp" />
     <ClCompile Include="src\Minerva\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\Minerva\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Minerva\Renderer\VertexArray.cpp" />
     <ClCompile Include="src\mvpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

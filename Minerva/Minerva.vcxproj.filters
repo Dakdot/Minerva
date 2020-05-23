@@ -16,8 +16,14 @@
     <Filter Include="src\Minerva\Platform">
       <UniqueIdentifier>{E2CF62F8-CE5E-ECC1-777D-00BD63EBFC67}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Minerva\Platform\OpenGL">
+      <UniqueIdentifier>{D686BE25-4294-EC0B-CB7A-E8F63787B8C2}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Minerva\Platform\Windows">
       <UniqueIdentifier>{1C3CAB35-08F7-9AE1-B1AE-132C9D48E571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Minerva\Renderer">
+      <UniqueIdentifier>{34D73FD3-2066-C99C-C984-DD97B5F2D942}</UniqueIdentifier>
     </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
@@ -87,11 +93,29 @@
     <ClInclude Include="src\Minerva\MouseButtonCodes.h">
       <Filter>src\Minerva</Filter>
     </ClInclude>
+    <ClInclude Include="src\Minerva\Platform\OpenGL\OpenGLBuffer.h">
+      <Filter>src\Minerva\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Platform\OpenGL\OpenGLContext.h">
+      <Filter>src\Minerva\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Minerva\Platform\Windows\WindowsInput.h">
       <Filter>src\Minerva\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Minerva\Platform\Windows\WindowsWindow.h">
       <Filter>src\Minerva\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Renderer\Buffer.h">
+      <Filter>src\Minerva\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Renderer\GraphicsContext.h">
+      <Filter>src\Minerva\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Renderer\Renderer.h">
+      <Filter>src\Minerva\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Minerva\Renderer\Shader.h">
+      <Filter>src\Minerva\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Minerva\Window.h">
       <Filter>src\Minerva</Filter>
@@ -1191,12 +1215,7 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
-    <ClInclude Include="src\Minerva\Renderer\GraphicsContext.h" />
-    <ClInclude Include="src\Minerva\Platform\OpenGL\OpenGLContext.h" />
-    <ClInclude Include="src\Minerva\Renderer\Shader.h" />
-    <ClInclude Include="src\Minerva\Renderer\Buffer.h" />
-    <ClInclude Include="src\Minerva\Platform\OpenGL\OpenGLBuffer.h" />
-    <ClInclude Include="src\Minerva\Renderer\Renderer.h" />
+    <ClInclude Include="src\Minerva\Renderer\VertexArray.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Minerva\Application.cpp">
@@ -1217,19 +1236,30 @@
     <ClCompile Include="src\Minerva\Log.cpp">
       <Filter>src\Minerva</Filter>
     </ClCompile>
+    <ClCompile Include="src\Minerva\Platform\OpenGL\OpenGLBuffer.cpp">
+      <Filter>src\Minerva\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Minerva\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>src\Minerva\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Minerva\Platform\Windows\WindowsInput.cpp">
       <Filter>src\Minerva\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Minerva\Platform\Windows\WindowsWindow.cpp">
       <Filter>src\Minerva\Platform\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="src\Minerva\Renderer\Buffer.cpp">
+      <Filter>src\Minerva\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Minerva\Renderer\Renderer.cpp">
+      <Filter>src\Minerva\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Minerva\Renderer\Shader.cpp">
+      <Filter>src\Minerva\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\mvpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Minerva\Platform\OpenGL\OpenGLContext.cpp" />
-    <ClCompile Include="src\Minerva\Renderer\Shader.cpp" />
-    <ClCompile Include="src\Minerva\Renderer\Buffer.cpp" />
-    <ClCompile Include="src\Minerva\Platform\OpenGL\OpenGLBuffer.cpp" />
-    <ClCompile Include="src\Minerva\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\Minerva\Renderer\VertexArray.cpp" />
   </ItemGroup>
 </Project>
