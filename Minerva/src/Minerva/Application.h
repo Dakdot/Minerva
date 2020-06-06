@@ -11,6 +11,7 @@
 
 #include "Minerva/Renderer/Shader.h"
 #include "Minerva/Renderer/Buffer.h"
+#include "Minerva/Renderer/VertexArray.h"
 
 namespace Minerva {
 
@@ -38,11 +39,12 @@ namespace Minerva {
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 
-		unsigned int m_VertexArray;
-		std::unique_ptr<VertexBuffer> m_VertexBuffer;
-		std::unique_ptr<IndexBuffer> m_IndexBuffer;
+		std::shared_ptr<Shader> m_Shader;
+		std::shared_ptr<VertexArray> m_VertexArray;
 
-		std::unique_ptr<Shader> m_Shader;
+		std::shared_ptr<Shader> m_Shader2;
+		std::shared_ptr<VertexArray> m_SquareVA;
+
 
 		static Application* s_Instance;
 	};
