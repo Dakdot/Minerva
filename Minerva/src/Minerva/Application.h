@@ -12,6 +12,7 @@
 #include "Minerva/Renderer/Shader.h"
 #include "Minerva/Renderer/Buffer.h"
 #include "Minerva/Renderer/VertexArray.h"
+#include "Minerva/Renderer/Camera.h"
 
 namespace Minerva {
 
@@ -38,12 +39,6 @@ namespace Minerva {
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
-
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-
-		std::shared_ptr<Shader> m_Shader2;
-		std::shared_ptr<VertexArray> m_SquareVA;
 
 
 		static Application* s_Instance;

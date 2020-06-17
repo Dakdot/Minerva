@@ -1,19 +1,28 @@
 #pragma once
 
-namespace Minerva {
+#include "RenderCommand.h"
+#include "Camera.h"
+#include "Shader.h"
 
-	enum class RendererAPI
-	{
-		NONE = 0, OPENGL = 1
-	};
+namespace Minerva {
 
 	class Renderer
 	{
 	public:
-		inline static RendererAPI GetAPI() { return s_RendererAPI; }
+		static void BeginScene(OrthoCamera& camera);
+		static void EndScene();
+
+		static void Submit(const std::shared_ptr<Shader>& shader, const std::shared_ptr<VertexArray>& vertexArray);
+
+		static RendererAPI::API GetAPI() { return RendererAPI::GetAPI(); }
 
 	private:
-		static RendererAPI s_RendererAPI;
+		struct SceneData
+		{
+			glm::mat4 VPMatrix;
+		};
+
+		static SceneData* m_SceneData;
 	};
 
 }

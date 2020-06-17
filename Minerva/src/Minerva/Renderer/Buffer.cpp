@@ -2,7 +2,7 @@
 #include "Buffer.h"
 
 #include "Renderer.h"
-#include "Minerva/Platform/OpenGL/OpenGLBuffer.h"
+#include "Platform/OpenGL/OpenGLBuffer.h"
 
 namespace Minerva {
 
@@ -15,10 +15,10 @@ namespace Minerva {
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::NONE:
+		case RendererAPI::API::NONE:
 			MV_CORE_ASSERT(false, "Renderer API \"NONE\" is currently unsupported.");
 			return nullptr;
-		case RendererAPI::OPENGL:
+		case RendererAPI::API::OPENGL:
 			return new OpenGLVertexBuffer(vertices, size);
 		}
 
@@ -34,10 +34,10 @@ namespace Minerva {
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::NONE:
+		case RendererAPI::API::NONE:
 			MV_CORE_ASSERT(false, "Renderer API \"NONE\" is currently unsupported.");
 			return nullptr;
-		case RendererAPI::OPENGL:
+		case RendererAPI::API::OPENGL:
 			return new OpenGLIndexBuffer(indices, count);
 		}
 

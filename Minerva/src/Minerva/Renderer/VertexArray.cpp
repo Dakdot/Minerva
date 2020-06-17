@@ -1,8 +1,8 @@
 #include "mvpch.h"
 #include "VertexArray.h"
-#include "Renderer.h"
 
-#include "Minerva/Platform/OpenGL/OpenGLVertexArray.h"
+#include "Renderer.h"
+#include "Platform/OpenGL/OpenGLVertexArray.h"
 
 namespace Minerva {
 
@@ -10,10 +10,10 @@ namespace Minerva {
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::NONE:
+		case RendererAPI::API::NONE:
 			MV_CORE_ASSERT(false, "Renderer API \"NONE\" is currently unsupported.");
 			return nullptr;
-		case RendererAPI::OPENGL:
+		case RendererAPI::API::OPENGL:
 			return new OpenGLVertexArray();
 		}
 

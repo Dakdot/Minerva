@@ -10,6 +10,15 @@
 
 #include "Minerva/ImGui/ImGuiLayer.h"
 
+// ---Renderer-------------------------------------
+#include "Minerva/Renderer/Renderer.h"
+#include "Minerva/Renderer/RenderCommand.h"
+
+#include "Minerva/Renderer/Buffer.h"
+#include "Minerva/Renderer/Shader.h"
+#include "Minerva/Renderer/VertexArray.h"
+
+#include "Minerva/Renderer/Camera.h"
+
 // ---Entry Point-----------------------------------
 #include "Minerva/EntryPoint.h"
-// -------------------------------------------------

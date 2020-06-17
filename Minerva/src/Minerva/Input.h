@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Minerva/Core.h"
+#include "KeyCodes.h"
 
 namespace Minerva {
 
